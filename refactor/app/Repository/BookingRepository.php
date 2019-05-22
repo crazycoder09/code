@@ -145,13 +145,13 @@ class BookingRepository extends BaseRepository
                     $response['message'] = "Du måste fylla in alla fält";
                     $response['field_name'] = "due_date";
                     return $response;
-                }
-                if (isset($data['due_time']) && $data['due_time'] == '') {
-                    $response['status'] = 'fail';
-                    $response['message'] = "Du måste fylla in alla fält";
-                    $response['field_name'] = "due_time";
-                    return $response;
-                }
+                // }
+                // if (isset($data['due_time']) && $data['due_time'] == '') {
+                //     $response['status'] = 'fail';
+                //     $response['message'] = "Du måste fylla in alla fält";
+                //     $response['field_name'] = "due_time";
+                //     return $response;
+                // }
                 if (!isset($data['customer_phone_type']) && !isset($data['customer_physical_type'])) {
                     $response['status'] = 'fail';
                     $response['message'] = "Du måste göra ett val här";
